@@ -1,0 +1,26 @@
+{
+  "name": "clothing-containers-vigo-map",
+  "version": "1.0.0",
+  "description": "Clothing containers location in Vigo, Pontevedra",
+  "main": "convertData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VaqueroFontenla/clothing-containers.git"
+  },
+  "keywords": [
+    "map",
+    "clothing",
+    "container",
+    "leaflet",
+    "vigo"
+  ],
+  "author": "Loreot Vaquero Fontenla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VaqueroFontenla/clothing-containers/issues"
+  },
+  "homepage": "https://github.com/VaqueroFontenla/clothing-containers#readme"
+}
