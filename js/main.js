@@ -7,14 +7,49 @@
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		id: 'mapbox/streets-v11'
-	}).addTo(mymap);
+    }).addTo(mymap);
+    
+		// LLamada a la API
 
-	L.marker([42.2354, -8.7267]).addTo(mymap)
-		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+	function addDataToMap(containers) {
+		L.geoJSON(containers, {
 
-	var popup = L.popup();
+			pointToLayer: function (feature, latlng) {
+				return L.marker(latlng);
+			},
+	
+			onEachFeature: onEachFeature
+		}).addTo(map);
+			
+		
+		containers.features.map(container => {
+			L.marker([container.geometry.coordinates[0], container.geometry.coordinates[1]]).addTo(mymap)
+			.bindPopup(container.properties)
+		});
+	}
+
+	var coorsLayer = L.geoJSON(coorsField, {
+
+		pointToLayer: function (feature, latlng) {
+			return L.marker(latlng, {icon: baseballIcon});
+		},
+
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+
+	fetch('../data/clothing-containers.geojson')
+		.then((response) => {
+			return response.json();
+			})
+		.then((data) => {
+			const containers = data;
+			addDataToMap(containers);
+	});
+
 
 	function onMapClick(e) {
+		debugger;
 		popup
 			.setLatLng(e.latlng)
 			.setContent("You clicked the map at " + e.latlng.toString())
