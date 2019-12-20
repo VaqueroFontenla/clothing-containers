@@ -1,0 +1,261 @@
+[
+  {
+    "Lugar": "Iglesia de San Esteban de Beade",
+    "Dirección": "Rúa de Ramiro Pascual, 112",
+    "Barrio": "BEADE",
+    "Lat": 42.1919303,
+    "Lon": -8.7065876
+  },
+  {
+    "Lugar": "Iglesia de Santiago de Bembrive",
+    "Dirección": "Rúa Río, 22",
+    "Barrio": "BEMBRIVE",
+    "Lat": 42.2038755,
+    "Lon": -8.6868608
+  },
+  {
+    "Lugar": "Asociación de Vecinos de Cabral",
+    "Dirección": "Avenida Santa Mariña, 95",
+    "Barrio": "CABRAL",
+    "Lat": 42.2219002,
+    "Lon": -8.6609785
+  },
+  {
+    "Lugar": "Iglesia de Santa Marina de Cabral",
+    "Dirección": "Camino de la Iglesia, 34",
+    "Barrio": "CABRAL",
+    "Lat": 42.2235136,
+    "Lon": -8.6566621
+  },
+  {
+    "Lugar": "Iglesia de San Cristóbal de Candeán",
+    "Dirección": "Rúa da Goleta, 1",
+    "Barrio": "CANDEÁN",
+    "Lat": 42.2418326,
+    "Lon": -8.6648821
+  },
+  {
+    "Lugar": "Asociación de Vecinos Monte da Mina",
+    "Dirección": "Camiño da Galindra, 16",
+    "Barrio": "CASTRELOS",
+    "Lat": 42.2094218,
+    "Lon": -8.7239761
+  },
+  {
+    "Lugar": "Gasolinera Repsol  (Camino del Caramuxo)",
+    "Dirección": "Avenida Ricardo Mella, 89",
+    "Barrio": "COMESAÑA",
+    "Lat": 42.2039779,
+    "Lon": -8.7614566
+  },
+  {
+    "Lugar": "Grupo Toysal (Polígono del Caramuxo)",
+    "Dirección": "Camiño do Caramuxo, 65",
+    "Barrio": "COMESAÑA",
+    "Lat": 42.203494,
+    "Lon": -8.7603003
+  },
+  {
+    "Lugar": "Iglesia de San Andrés de Comesaña",
+    "Dirección": "Estrada Matamá-Pazo Comesaña, 115",
+    "Barrio": "COMESAÑA",
+    "Lat": 42.1994717,
+    "Lon": -8.754178
+  },
+  {
+    "Lugar": "Iglesia de San Salvador de Coruxo",
+    "Dirección": "Estrada de Camposancos, 282",
+    "Barrio": "CORUXO",
+    "Lat": 42.1882595,
+    "Lon": -8.7767438
+  },
+  {
+    "Lugar": "Parroquia de San Paio de Lavadores",
+    "Dirección": "Subida á Igrexa, 14",
+    "Barrio": "LAVADORES",
+    "Lat": 42.2343295,
+    "Lon": -8.6899476
+  },
+  {
+    "Lugar": "Parroquia de Santa Cristina de Lavadores",
+    "Dirección": "Rúa de Santa Cristina, 0",
+    "Barrio": "LAVADORES",
+    "Lat": 42.2266393,
+    "Lon": -8.6969733
+  },
+  {
+    "Lugar": "Parroquia de San Pedro de Matamá",
+    "Dirección": "Camiño Real, 10",
+    "Barrio": "MATAMÁ",
+    "Lat": 42.2010246,
+    "Lon": -8.7376815
+  },
+  {
+    "Lugar": "Centro Pastoral San Juan Pablo II",
+    "Dirección": "Rúa Pedra Seixa, 25",
+    "Barrio": "NAVIA",
+    "Lat": 42.2101763,
+    "Lon": -8.7592729
+  },
+  {
+    "Lugar": "Parroquia de San Paio de Navia",
+    "Dirección": "San Paio, 197",
+    "Barrio": "NAVIA",
+    "Lat": 42.2083644,
+    "Lon": -8.7668959
+  },
+  {
+    "Lugar": "Hermanos Misioneros de los Enfermos Pobres",
+    "Dirección": "Avenida de Galicia, 160",
+    "Barrio": "TEIS",
+    "Lat": 42.2523047,
+    "Lon": -8.6876166
+  },
+  {
+    "Lugar": "Parroquia de San Andrés de Valladares",
+    "Dirección": "Camino de la Iglesia, 34",
+    "Barrio": "VALLADARES",
+    "Lat": 42.1776636,
+    "Lon": -8.7245333
+  },
+  {
+    "Lugar": "Centro Comercial Gran Vía",
+    "Dirección": "Rúa Miradoiro, 2",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2207659,
+    "Lon": -8.7243706
+  },
+  {
+    "Lugar": "El Corte Inglés",
+    "Dirección": "Avenida da Gran Vía, 28",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2322111,
+    "Lon": -8.7174503
+  },
+  {
+    "Lugar": "Iglesia de San Miguel de Bouzas",
+    "Dirección": "Rúa de Sebastián Elcano, 24",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2262171,
+    "Lon": -8.7535606
+  },
+  {
+    "Lugar": "Iglesia Santo Cura de Ars",
+    "Dirección": "Rúa de Aragón, 203",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2407449,
+    "Lon": -8.7007885
+  },
+  {
+    "Lugar": "Mercado Progreso",
+    "Dirección": "Rúa do Progreso, 28",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.235468,
+    "Lon": -8.7224845
+  },
+  {
+    "Lugar": "Mercado Travesas",
+    "Dirección": "Rúa Espedrigada, 7",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2179886,
+    "Lon": -8.7354594
+  },
+  {
+    "Lugar": "Nave-almacén de Cáritas Diocesana de Tui-Vigo",
+    "Dirección": "Rúa do Gandarón, 107",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2227629,
+    "Lon": -8.6990821
+  },
+  {
+    "Lugar": "Parroquia Corazón de María (Claretianos)",
+    "Dirección": "Rúa Honduras, 7",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2299666,
+    "Lon": -8.7185863
+  },
+  {
+    "Lugar": "Parroquia de la Inmaculada Concepción",
+    "Dirección": "Rúa de Toledo, 5",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2321319,
+    "Lon": -8.7004588
+  },
+  {
+    "Lugar": "Parroquia de Nuestra Señora de la Paz",
+    "Dirección": "Rúa Gaivota, 9",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2256786,
+    "Lon": -8.7069921
+  },
+  {
+    "Lugar": "Parroquia de Nuestra Señora del Carmen",
+    "Dirección": "Paseo Padre Lorenzo Carmelita, 12",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2237298,
+    "Lon": -8.7316148
+  },
+  {
+    "Lugar": "Parroquia de Nuestra Señora del Perpetuo Socorro",
+    "Dirección": "Rúa Lalín, 3",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.221399,
+    "Lon": -8.733975
+  },
+  {
+    "Lugar": "Parroquia de Nuestra Señora del Rocío",
+    "Dirección": "Rúa Vilagarcía de Arousa, 11",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2188263,
+    "Lon": -8.7486727
+  },
+  {
+    "Lugar": "Parroquia de San Francisco Javier (Jesuitas)",
+    "Dirección": "Rúa Sanjurjo Badía, 79",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2448253,
+    "Lon": -8.7038788
+  },
+  {
+    "Lugar": "Parroquia de San José y Santa Rita",
+    "Dirección": "Rúa Vázquez Varela, 56",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2288935,
+    "Lon": -8.7163523
+  },
+  {
+    "Lugar": "Parroquia de Santa Clara",
+    "Dirección": "Avenida de Ramón Nieto, 405",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2268012,
+    "Lon": -8.6758608
+  },
+  {
+    "Lugar": "Parroquia del Santísimo Cristo de la Victoria",
+    "Dirección": "Rúa de Baiona, 9",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2148422,
+    "Lon": -8.7501528
+  },
+  {
+    "Lugar": "Parroquia Santuario de Nuestra Señora de Fátima",
+    "Dirección": "Rúa de Vía Norte, s/n",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2346575,
+    "Lon": -8.7076875
+  },
+  {
+    "Lugar": "Vitrasa",
+    "Dirección": "Estrada de Camposancos, 36",
+    "Barrio": "VIGO CENTRO",
+    "Lat": 42.2030753,
+    "Lon": -8.7548653
+  },
+  {
+    "Lugar": "Asociación de Vecinos de Zamáns",
+    "Dirección": "Carretera Zamáns, 251",
+    "Barrio": "ZAMÁNS",
+    "Lat": 42.1583043,
+    "Lon": -8.6866311
+  }
+]
