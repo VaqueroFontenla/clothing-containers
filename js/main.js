@@ -8,35 +8,35 @@
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 		id: 'mapbox/streets-v11'
     }).addTo(mymap);
-    
+	
+	var baseballIcon = L.icon({
+		iconUrl: '../trash.png',
+		iconSize: [32, 37],
+		iconAnchor: [16, 37],
+		popupAnchor: [0, -28]
+	});
+
+	function onEachFeature(feature, layer) {
+
+		if (feature.properties) {
+			var popupContent = 
+			` <span> Nombre del sitio: </span> <span> ${feature.properties.Lugar} </span>
+			  <span> Dirección: </span> <span> ${feature.properties.Dirección} </span>
+			  <span> Barrio: </span> <span> ${feature.properties.Barrio} </span>
+			`;
+		}
+
+		layer.bindPopup(popupContent);
+	}
+
 		// LLamada a la API
 
 	function addDataToMap(containers) {
 		L.geoJSON(containers, {
-
-			pointToLayer: function (feature, latlng) {
-				return L.marker(latlng);
-			},
-	
 			onEachFeature: onEachFeature
-		}).addTo(map);
+		}).addTo(mymap);
 			
-		
-		containers.features.map(container => {
-			L.marker([container.geometry.coordinates[0], container.geometry.coordinates[1]]).addTo(mymap)
-			.bindPopup(container.properties)
-		});
 	}
-
-	var coorsLayer = L.geoJSON(coorsField, {
-
-		pointToLayer: function (feature, latlng) {
-			return L.marker(latlng, {icon: baseballIcon});
-		},
-
-		onEachFeature: onEachFeature
-	}).addTo(map);
-
 
 	fetch('../data/clothing-containers.geojson')
 		.then((response) => {
@@ -47,13 +47,3 @@
 			addDataToMap(containers);
 	});
 
-
-	function onMapClick(e) {
-		debugger;
-		popup
-			.setLatLng(e.latlng)
-			.setContent("You clicked the map at " + e.latlng.toString())
-			.openOn(mymap);
-	}
-
-	mymap.on('click', onMapClick);
