@@ -1,27 +1,29 @@
 
-	var mymap = L.map('mapId').setView([42.2354, -8.7267], 13);
+	var mapContainer = L.map('map').setView([42.2354, -8.7267], 13);
+	var tiles = L.esri.basemapLayer("Streets").addTo(mapContainer);
 
-	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: 'mapbox/streets-v11'
-    }).addTo(mymap);
+	// create the geocoding control and add it to the map
+    var searchControl = L.esri.Geocoding.geosearch().addTo(mapContainer);
+
+    // create an empty layer group to store the results and add it to the map
+	var results = L.layerGroup().addTo(mapContainer);
 	
+	// Container Icon
 	var baseballIcon = L.icon({
-		iconUrl: '../trash.png',
+		iconUrl: '../images/trash.png',
 		iconSize: [32, 37],
 		iconAnchor: [16, 37],
 		popupAnchor: [0, -28]
 	});
 
+
 	function onEachFeature(feature, layer) {
 
 		if (feature.properties) {
 			var popupContent = 
-			` <span> Nombre del sitio: </span> <span> ${feature.properties.Lugar} </span>
-			  <span> Dirección: </span> <span> ${feature.properties.Dirección} </span>
+			` <span> ${feature.properties.Lugar} </span>
+			  <hr>
+			  <span> Dirección: </span> <span> ${feature.properties.Dirección} </span> <br />
 			  <span> Barrio: </span> <span> ${feature.properties.Barrio} </span>
 			`;
 		}
@@ -33,8 +35,12 @@
 
 	function addDataToMap(containers) {
 		L.geoJSON(containers, {
+			pointToLayer: function (feature, latlng) {
+				return L.marker(latlng, {icon: baseballIcon});
+			},
+	
 			onEachFeature: onEachFeature
-		}).addTo(mymap);
+		}).addTo(mapContainer);
 			
 	}
 
@@ -46,4 +52,12 @@
 			const containers = data;
 			addDataToMap(containers);
 	});
+
+	 // listen for the results event and add every result to the map
+	 searchControl.on("results", function(data) {
+        results.clearLayers();
+        for (var i = data.results.length - 1; i >= 0; i--) {
+            results.addLayer(L.marker(data.results[i].latlng));
+        }
+    });
 

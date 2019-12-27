@@ -22,5 +22,7 @@
   "bugs": {
     "url": "https://github.com/VaqueroFontenla/clothing-containers/issues"
   },
-  "homepage": "https://github.com/VaqueroFontenla/clothing-containers#readme"
+  "homepage": "https://github.com/VaqueroFontenla/clothing-containers#readme",
+  "dependencies": {
+  }
 }
