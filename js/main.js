@@ -1,6 +1,6 @@
 
 	var map = L.map('map').setView([42.2354, -8.7267], 13);
-	var layer = L.esri.basemapLayer("Streets").addTo(map);
+	var layer = L.esri.basemapLayer("Gray").addTo(map);
 	var layerLabels;
 
 	// create the geocoding control and add it to the map
@@ -15,7 +15,7 @@
 	// Container Icon
 	var baseballIcon = L.icon({
 		iconUrl: '../images/trash.png',
-		iconSize: [32, 37],
+		iconSize: [21, 25],
 		iconAnchor: [16, 37],
 		popupAnchor: [0, -28]
 	});
@@ -44,20 +44,22 @@
 	}
 	
 	document
-	.querySelector('#basemaps')
-	.addEventListener('change', function (e) {
-		var basemap = e.target.value;
-		setBasemap(basemap);
-	});
+		.querySelector('#basemaps')
+		.addEventListener('change', function (e) {
+			var basemap = e.target.value;
+			setBasemap(basemap);
+		});
 
 	const onEachFeature = (feature, layer) => {
 
 		if (feature.properties) {
 			var popupContent = 
-			` <span> ${feature.properties.Lugar} </span>
+			` <span> <strong> ${feature.properties.Lugar} </strong> </span> <br />
+			  <br />
 			  <hr>
-			  <span> Dirección: </span> <span> ${feature.properties.Dirección} </span> <br />
-			  <span> Barrio: </span> <span> ${feature.properties.Barrio} </span>
+			  <br />
+			  <span> <strong>Dirección:  </strong> </span> <span> ${feature.properties.Dirección} </span> <br />
+			  <span> <strong>Barrio:  </strong> </span> <span> ${feature.properties.Barrio} </span>
 			`;
 		}
 
@@ -110,6 +112,12 @@
 	
 		  L.marker(result.latlng).addTo(map).bindPopup(result.address.Match_addr).openPopup();
 		});
+	});
+
+	document
+		.querySelector('#help')
+		.addEventListener('click', function (e) {
+			document.querySelector(".layout__list").classList.toggle('hidden');
 	});
 
 
