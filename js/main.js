@@ -1,7 +1,8 @@
-const ZOOM = 12;
+const ZOOM = 13;
+const ZOOM_MOBILE = 12;
 const MAP_CENTER = [42.2, -8.71];
 
-const map = L.map("map").setView(MAP_CENTER, ZOOM);
+const map = L.map("map").setView(MAP_CENTER, window.screen.width > 798 ? ZOOM :  ZOOM_MOBILE);
 
 let layer = L.esri.basemapLayer("Gray").addTo(map);
 let layerLabels;
@@ -17,8 +18,11 @@ const results = L.layerGroup().addTo(map);
 
 // Container Icon
 const baseballIcon = L.icon({
-  iconUrl: window.screen.width > 798 ? "../images/trash.png" : "../images/registro.png",
-  iconSize: window.screen.width > 798 ? [24, 24] :[6, 6],
+  iconUrl:
+    window.screen.width > 798
+      ? "../images/trash.png"
+      : "../images/registro.png",
+  iconSize: window.screen.width > 798 ? [24, 24] : [6, 6],
   iconAnchor: [4, 9],
   popupAnchor: [0, -8]
 });
@@ -80,6 +84,14 @@ const addHidden = () => {
     document.querySelector(".geocoder-control").classList.add("hidden");
   }
 };
+
+const showOptionsHelp = (e) => {
+  e.preventDefault();
+  document.querySelector("#basemaps-wrapper").classList.toggle("hidden");
+  document.querySelector(".geocoder-control").classList.toggle("hidden");
+  document.querySelector(".help").classList.toggle("hidden");
+};
+
 const init = () => {
   fetch("../data/clothing-containers.geojson")
     .then(response => {
@@ -118,35 +130,20 @@ map.on("click", e => {
     });
 });
 
-document.querySelector(".dashboard__search").addEventListener("click", e => {
-  e.preventDefault();
-  document.querySelector(".geocoder-control").classList.toggle("hidden");
-});
-
-document.querySelector(".dashboard__basemaps").addEventListener("click", e => {
-  e.preventDefault();
-  document.querySelector("#basemaps-wrapper").classList.toggle("hidden");
-});
-
-document.querySelector(".dashboard__help").addEventListener("click", e => {
-  e.preventDefault();
-  document.querySelector(".help").classList.toggle("hidden");
-});
-
+document.querySelector(".dashboard__search").addEventListener("click", e => showOptionsHelp(e));
+document.querySelector(".dashboard__basemaps").addEventListener("click", e => showOptionsHelp(e));
+document.querySelector(".dashboard__help").addEventListener("click", e => showOptionsHelp(e));
 document
   .querySelector("#basemaps")
   .addEventListener("click", e => e.stopPropagation());
-
 document.querySelector("#basemaps").addEventListener("change", e => {
   const basemap = e.target.value;
   setBasemap(basemap);
 });
-
 document.querySelector(".help-toggle").addEventListener("click", e => {
   e.stopPropagation();
   document.querySelector(".help__content").classList.toggle("hidden");
 });
-
 document.querySelector("#map").addEventListener("click", e => {
   e.stopPropagation();
 });

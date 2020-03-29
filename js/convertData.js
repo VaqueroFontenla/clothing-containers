@@ -1,7 +1,6 @@
 const data = require('../data/containers.json');
 const fs = require('fs');
 
-
 // Construcción del archivo .geoJson para poder servirlo desde nuestro ordenador
 const fromArrayToGeoJSON = (arr) => {
     const geoJSON = {
@@ -22,7 +21,6 @@ const fromArrayToGeoJSON = (arr) => {
     return geoJSON;
 }
 
-//console.log(JSON.stringify(fromArrayToGeoJSON(data)));
 fs.writeFile('../data/clothing-containers.geojson', JSON.stringify(fromArrayToGeoJSON(data)), (err) => {
     if (err) console.log(err);
     console.log("Housting: Successfully Written to File.");

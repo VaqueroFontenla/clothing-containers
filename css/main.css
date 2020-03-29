@@ -101,7 +101,7 @@
   z-index: 9999;
   background: white;
   padding: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  border: 0px solid rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -115,7 +115,6 @@
 .geocoder-control {
   position: absolute;
   top: 20px;
-  left: 20px;
   height: 2rem;
 }
 
@@ -128,16 +127,16 @@
     height: 100vh;
     position: relative;
   }
-  .leaflet-touch .leaflet-bar a {
-    display: visible;
-  }
+
   .dashboard {
     display: none;
   }
+
   .help {
     top: inherit;
     bottom: 30px;
   }
+
   #basemaps-wrapper {
     bottom: 30px;
     right: 50px;
