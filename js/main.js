@@ -22,9 +22,7 @@ const results = L.layerGroup().addTo(map);
 // Container Icon
 const baseballIcon = L.icon({
   iconUrl:
-    window.screen.width > 798
-      ? "./images/trash.png"
-      : "./images/registro.png",
+    window.screen.width > 798 ? "./images/trash.png" : "./images/registro.png",
   iconSize: window.screen.width > 798 ? [24, 24] : [6, 6],
   iconAnchor: [4, 9],
   popupAnchor: [0, -8]
@@ -133,15 +131,25 @@ map.on("click", e => {
     });
 });
 
-document
-  .querySelector(".dashboard__search")
-  .addEventListener("click", e => showOptionsHelp(e));
-document
-  .querySelector(".dashboard__basemaps")
-  .addEventListener("click", e => showOptionsHelp(e));
-document
-  .querySelector(".dashboard__help")
-  .addEventListener("click", e => showOptionsHelp(e));
+document.querySelector(".dashboard__search").addEventListener("click", e => {
+  e.preventDefault();
+  document.querySelector(".geocoder-control").classList.toggle("hidden");
+});
+
+const closeBaseMap = (e) => {
+  e.stopPropagation();
+  document.querySelector("#basemaps-wrapper").classList.toggle("hidden");
+}
+document.querySelector(".dashboard__basemaps").addEventListener("click", e => closeBaseMap(e));
+document.querySelector(".basemaps__close").addEventListener("click", e => closeBaseMap(e));
+
+const closeHelp = (e) => {
+  e.stopPropagation();
+  document.querySelector(".help").classList.toggle("hidden");
+}
+document.querySelector(".dashboard__help").addEventListener("click", e => closeHelp(e));
+document.querySelector(".help__close").addEventListener("click", e => closeHelp(e));
+
 document
   .querySelector("#basemaps")
   .addEventListener("click", e => e.stopPropagation());
@@ -149,6 +157,8 @@ document.querySelector("#basemaps").addEventListener("change", e => {
   const basemap = e.target.value;
   setBasemap(basemap);
 });
+
+
 document.querySelector(".help-toggle").addEventListener("click", e => {
   e.stopPropagation();
   document.querySelector(".help__content").classList.toggle("hidden");

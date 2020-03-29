@@ -81,6 +81,10 @@
   background-image: url("../images/search.png");
 }
 
+.help__close, .basemaps__close {
+  display: flex;
+  justify-content: flex-end;
+}
 .hidden {
   display: none;
 }
@@ -101,13 +105,15 @@
   z-index: 9999;
   background: white;
   padding: 10px;
-  border: 0px solid rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.7);
 }
 
 #basemaps {
+  margin: 1rem;
+  padding: 1rem;
   background: white;
-  border: none;
+  border: 2px solid rgba(0,0,0,0.2);
+  border-radius: 4px;;
   font-size: 16px;
   font-weight: 700;
 }
