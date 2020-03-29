@@ -75,6 +75,7 @@ const buildGeocoder = () => {
 const addHidden = () => {
   if (window.screen.width < 798) {
     document.querySelector(".help").classList.add("hidden");
+    document.querySelector(".leaflet-control-zoom").classList.add("hidden");
     document.querySelector(".leaflet-bar").classList.add("hidden");
     document.querySelector(".geocoder-control").classList.add("hidden");
   }
