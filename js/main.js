@@ -2,7 +2,10 @@ const ZOOM = 13;
 const ZOOM_MOBILE = 12;
 const MAP_CENTER = [42.2, -8.71];
 
-const map = L.map("map").setView(MAP_CENTER, window.screen.width > 798 ? ZOOM :  ZOOM_MOBILE);
+const map = L.map("map").setView(
+  MAP_CENTER,
+  window.screen.width > 798 ? ZOOM : ZOOM_MOBILE
+);
 
 let layer = L.esri.basemapLayer("Gray").addTo(map);
 let layerLabels;
@@ -85,7 +88,7 @@ const addHidden = () => {
   }
 };
 
-const showOptionsHelp = (e) => {
+const showOptionsHelp = e => {
   e.preventDefault();
   document.querySelector("#basemaps-wrapper").classList.toggle("hidden");
   document.querySelector(".geocoder-control").classList.toggle("hidden");
@@ -93,7 +96,7 @@ const showOptionsHelp = (e) => {
 };
 
 const init = () => {
-  fetch("../data/clothing-containers.geojson")
+  fetch("./data/clothing-containers.geojson")
     .then(response => {
       return response.json();
     })
@@ -130,9 +133,15 @@ map.on("click", e => {
     });
 });
 
-document.querySelector(".dashboard__search").addEventListener("click", e => showOptionsHelp(e));
-document.querySelector(".dashboard__basemaps").addEventListener("click", e => showOptionsHelp(e));
-document.querySelector(".dashboard__help").addEventListener("click", e => showOptionsHelp(e));
+document
+  .querySelector(".dashboard__search")
+  .addEventListener("click", e => showOptionsHelp(e));
+document
+  .querySelector(".dashboard__basemaps")
+  .addEventListener("click", e => showOptionsHelp(e));
+document
+  .querySelector(".dashboard__help")
+  .addEventListener("click", e => showOptionsHelp(e));
 document
   .querySelector("#basemaps")
   .addEventListener("click", e => e.stopPropagation());
