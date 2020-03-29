@@ -23,8 +23,8 @@ const results = L.layerGroup().addTo(map);
 const baseballIcon = L.icon({
   iconUrl:
     window.screen.width > 798
-      ? "../images/trash.png"
-      : "../images/registro.png",
+      ? "./images/trash.png"
+      : "./images/registro.png",
   iconSize: window.screen.width > 798 ? [24, 24] : [6, 6],
   iconAnchor: [4, 9],
   popupAnchor: [0, -8]
