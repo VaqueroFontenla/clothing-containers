@@ -39,7 +39,7 @@
   <body>
     <div class="app" id="app">
         <div class="map" id="map">
-          <div id="basemaps-wrapper" class="leaflet-bar hidden">
+          <div id="basemaps-wrapper" class="leaflet-bar">
             <select id="basemaps">
               <option value="Topographic">Topográfico</option>
               <option value="Streets" >Calles</option>
@@ -48,14 +48,17 @@
               <option value="ImageryClarity">Imagery</option>
             </select>
           </div>
-          <div class="help hidden">
+          <div class="help">
             <div class="help__title">
               Isto é un mapiña cos contedores de roupa que hai no "Vigo
               metropolitano".<br />
-             Tes algunha dúbida?
+              <div class="help-toggle">
+                Tes algunha dúbida?
+              <i class="fa fa-angle-down"></i>
+             </div>
             </div>
             <hr />
-            <div class="help__content">
+            <div class="help__content hidden">
               <div class="help__item">
                 <div class="help__image help__image-zoom"></div>
                 <div> Para facer zoom</div>
