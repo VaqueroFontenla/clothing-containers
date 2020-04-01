@@ -114,23 +114,6 @@ searchControl.on("results", data => {
   }
 });
 
-// listen for to show the closest street address to the clicked point.
-map.on("click", e => {
-  geocodeService
-    .reverse()
-    .latlng(e.latlng)
-    .run(function(error, result) {
-      if (error) {
-        return;
-      }
-
-      L.marker(result.latlng)
-        .addTo(map)
-        .bindPopup(result.address.Match_addr)
-        .openPopup();
-    });
-});
-
 document.querySelector(".dashboard__search").addEventListener("click", e => {
   e.preventDefault();
   document.querySelector(".geocoder-control").classList.toggle("hidden");

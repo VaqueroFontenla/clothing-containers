@@ -31,35 +31,34 @@
   position: absolute;
   top: 10px;
   z-index: 999;
-  margin: 10px;
-  padding: 10px;
   background: rgba(0, 0, 0, 0.7);
+  line-height: 1;
   color: #fff;
   border-radius: 4px;
-  padding: 2rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 .help__title {
-  margin-bottom: 1rem;
-  font-size: 16px;
+  margin-top: 1rem;
+  font-size: 14px;
   font-weight: 700s;
 }
 
 .help__content {
   display: flex;
   flex-direction: column;
-  font-size: 14px;
 }
 
 .help__item {
   display: flex;
   align-items: center;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .help__image {
   width: 10rem;
-  height: 5rem;
+  height: 4rem;
   margin-right: 1rem;
   border: 2px solid white;
   border-radius: 4px;
@@ -70,7 +69,7 @@
 .help__image-zoom {
   background-image: url("../images/zoom.png");
   width: 3rem;
-  height: 6rem;
+  height: 5rem;
 }
 
 .help__image-map {
@@ -81,10 +80,12 @@
   background-image: url("../images/search.png");
 }
 
-.help__close, .basemaps__close {
+.help__close,
+.basemaps__close {
   display: flex;
   justify-content: flex-end;
 }
+
 .hidden {
   display: none;
 }
@@ -93,34 +94,57 @@
   position: static;
 }
 
+.leaflet-top .leaflet-control {
+  margin: 0;
+}
+.leaflet-left .leaflet-control {
+  margin: 0;
+}
+
 .leaflet-popup-content {
   margin: 0.8rem;
   font-size: 14px;
 }
 
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#basemaps-wrapper-cover {
+  border: 2px solid rgba(0,0,0,0.2);
+  background-clip: padding-box;
+  box-shadow: none;
+}
 #basemaps-wrapper {
   position: absolute;
-  top: 30px;
-  left: 10px;
+  top: 3rem;
+  left: 1rem;
   z-index: 9999;
   background: white;
-  padding: 10px;
+  padding: 0.5rem;
   color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+ 
+  
+  
+  border-radius: 4px;
 }
 
 #basemaps {
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   background: white;
-  border: 2px solid rgba(0,0,0,0.2);
-  border-radius: 4px;;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   font-size: 16px;
   font-weight: 700;
 }
 
 .geocoder-control {
   position: absolute;
-  top: 20px;
+  top: 2rem;
+  left: 1rem;
   height: 2rem;
 }
 
@@ -140,14 +164,14 @@
 
   .help {
     top: inherit;
-    bottom: 30px;
+    bottom: 2rem;
+    left: 1rem;
+    margin: 0;
   }
 
   #basemaps-wrapper {
-    bottom: 30px;
-    right: 50px;
-    top: inherit;
-    left: inherit;
+    top: 5rem;
+    left: 1rem;
   }
 
   #basemaps {
@@ -157,7 +181,7 @@
 
   .leaflet-control-zoom {
     position: absolute;
-    bottom: 30px;
-    right: 10px;
+    bottom: 2rem;
+    right: 1rem;
   }
 }
