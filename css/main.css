@@ -29,14 +29,15 @@
 
 .help {
   position: absolute;
-  top: 10px;
+  top: 2rem;
+  left: 1rem;
+  margin-right: 1rem;
   z-index: 999;
   background: rgba(0, 0, 0, 0.7);
   line-height: 1;
   color: #fff;
   border-radius: 4px;
   padding: 1rem;
-  margin: 1rem;
 }
 
 .help__title {
@@ -112,26 +113,25 @@ hr {
 }
 
 #basemaps-wrapper-cover {
-  border: 2px solid rgba(0,0,0,0.2);
+  border: 2px solid rgba(0, 0, 0, 0.2);
   background-clip: padding-box;
   box-shadow: none;
 }
 #basemaps-wrapper {
   position: absolute;
-  top: 3rem;
+  top: 2rem;
   left: 1rem;
   z-index: 9999;
+  width: 80%;
   background: white;
   padding: 0.5rem;
   color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 1px 5px rgba(0,0,0,0.65);
- 
-  
-  
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
   border-radius: 4px;
 }
 
 #basemaps {
+  width: 90%;
   margin: 0.5rem;
   padding: 0.5rem;
   background: white;
@@ -142,14 +142,9 @@ hr {
 }
 
 .geocoder-control {
-  position: absolute;
-  top: 2rem;
-  left: 1rem;
-  height: 2rem;
-}
-
-.geocoder-control-input {
-  height: inherit;
+  margin-top: 2rem !important;
+  margin-left: 1rem !important;
+  height: 2.5rem !important;
 }
 
 @media all and (min-width: 798px) {
@@ -161,17 +156,18 @@ hr {
   .dashboard {
     display: none;
   }
-
-  .help {
-    top: inherit;
-    bottom: 2rem;
-    left: 1rem;
-    margin: 0;
+  .geocoder-control {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+    height: 2.5rem !important;
+    width: 25rem !important;
   }
 
   #basemaps-wrapper {
-    top: 5rem;
+    top: inherit;
+    bottom: 2rem;
     left: 1rem;
+    width: 15rem;
   }
 
   #basemaps {
