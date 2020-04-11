@@ -8,7 +8,7 @@
 
 .app {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .map {
@@ -162,7 +162,7 @@ hr {
     width: 25rem !important;
   }
 
- .geocoder-control-input {
+  .geocoder-control-input {
     height: 3rem !important;
   }
 
