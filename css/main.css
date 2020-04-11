@@ -159,8 +159,11 @@ hr {
   .geocoder-control {
     margin-left: 0 !important;
     margin-right: 1rem !important;
-    height: 2.5rem !important;
     width: 25rem !important;
+  }
+
+ .geocoder-control-input {
+    height: 3rem !important;
   }
 
   #basemaps-wrapper {
